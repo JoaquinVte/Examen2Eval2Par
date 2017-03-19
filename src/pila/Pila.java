@@ -37,11 +37,17 @@ public class Pila implements Acceso {
 		
 	}
 	
+	public void vaciar(){
+		try{
+			while(obtener()!=null);
+		}catch(Exception e){}
+	}
+	
 	public String toString(){
 		Nodo aux=cima;
 		String salida = "";
 		while(aux!=null){
-			salida = salida + aux.toString() + " ";
+			salida = salida + aux.toString() + "\n";
 			aux = aux.getAnterior();
 		}
 		return salida;

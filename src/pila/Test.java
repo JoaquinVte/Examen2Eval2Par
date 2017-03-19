@@ -48,7 +48,8 @@ public class Test {
 				}
 				borrarPantalla();
 			} catch (Exception e) {
-				System.out.println("Se ha producido un error. Debes introducir un numero [1,2] y 0 para salir.");
+				System.out.println("Se ha producido un error. Debes introducir un numero [1,2] y 0 para salir. Pulse [Intro] para continuar");
+				entrada.nextLine();
 			}
 
 		} while (!salir);
@@ -91,6 +92,9 @@ public class Test {
 		Pila pilaAux = new Pila();
 		Nodo aux;
 		Scanner entrada = new Scanner(System.in);
+		
+		// Vaciamos la pila
+		pilaCopia.vaciar();
 		
 		try {
 			aux = pila.obtener();			
